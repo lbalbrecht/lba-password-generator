@@ -21,7 +21,7 @@ function generatePassword(){
     //confirm/prompt responses
 
       var lengthPrompt = prompt("How long would you like your password to be?");
-    //TODO: set password to be between 8-128 characters
+    //set password to be between 8-128 characters
     if (8 <= lengthPrompt && lengthPrompt <= 128) {
       console.log(lengthPrompt);
     }
@@ -35,7 +35,7 @@ function generatePassword(){
       return;
     }
   
-  //TODO: confirm for all character types
+  //confirm for all character types
     //lowercase
       var lowerConfirm = confirm("Would you like lowercase letters?");
       if (lowerConfirm === true) {
@@ -60,15 +60,14 @@ function generatePassword(){
         special.concat(chosen)
       }
 
-  // lengthPrompt();
-  // lowerConfirm();
-  // upperConfirm();
-  // numberConfirm();
-  // specialConfirm();
-
-  console.log(chosen);
-  return "extraSecretPassword"
-}
+    for (i = 0; i < lengthPrompt; i++) {
+      var finalPassword = lower[Math.floor(Math.random() * lower.length)];
+      console.log(finalPassword)
+    }
+    
+    // console.log(chosen);
+    return "supersecretpassword"
+  }
 
 // Write password to the #password input
 /* DO NOT CHANGE THIS CODE!  This function is going to call your generatePassword() function and whatever is returned from that function will be put onto the page */
