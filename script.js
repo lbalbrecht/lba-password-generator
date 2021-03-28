@@ -7,17 +7,17 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword(){
 
     //lowercase letters
-    var alpha = "abcdefghijklmnopqrstuvwxyz";
-    var lower = alpha.split("");
+    var lower = "abcdefghijklmnopqrstuvwxyz";
     //uppercase letters
-    var upperAlpha = alpha.toUpperCase();
-    var upper = upperAlpha.split("");
+    var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     //numbers
-    var numbers = "1234567890".split("");
+    var numbers = "1234567890"
     //special characters
-    var special = "`~!@#$%^&*()_-+={[}|;:'<>?/".split("");
+    var special = "`~!@#$%^&*()_-+={[}|;:'<>?/"
     //chosen characters
     var chosen = [];
+    var finalPassArray = [];
+
     //confirm/prompt responses
 
       var lengthPrompt = prompt("How long would you like your password to be?");
@@ -39,34 +39,48 @@ function generatePassword(){
     //lowercase
       var lowerConfirm = confirm("Would you like lowercase letters?");
       if (lowerConfirm === true) {
-        lower.concat(chosen);
+        chosen.push(lower);
       }
+
+      console.log(chosen)
 
     //uppercase
       var upperConfirm = confirm("Would you like uppercase letters?");
       if(upperConfirm === true) {
-        upper.concat(chosen)
+        chosen.push(upper);
       }
+      
+
+      console.log(chosen)
 
     //numbers
       var numberConfirm = confirm("Would you like numbers?");
       if(numberConfirm === true) {
-        numbers.concat(chosen)
+        chosen.push(numbers);
       }
+
+      console.log(chosen)
   
     //special
       var specialConfirm = confirm("Would you like special characters?");
       if(specialConfirm === true) {
-        special.concat(chosen)
+        chosen.push(special);
       }
 
+      var finalChoice = chosen.join("")
+
+      var passArray = finalChoice.split("")
+
+      console.log(passArray);
+
     for (i = 0; i < lengthPrompt; i++) {
-      var finalPassword = lower[Math.floor(Math.random() * lower.length)];
-      console.log(finalPassword)
+      var passChar = passArray[Math.floor(Math.random() * passArray.length)];
+      finalPassArray.push(passChar);
     }
-    
-    // console.log(chosen);
-    return "supersecretpassword"
+
+    var finalPassword = finalPassArray.join("");
+
+    return finalPassword;
   }
 
 // Write password to the #password input
