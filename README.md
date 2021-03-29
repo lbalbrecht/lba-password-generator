@@ -15,4 +15,4 @@ After all prompts are answered, the page will generate a password based on the c
 
 ![Github repository] (https://github.com/lbalbrecht/lba-password-generator-homework)
 
-![Password generator landing page]  (C:\Users\leigh\bootcamp\homework2\lba-password-generator-homework\assets\password-generator.png)
+![Password generator landing page]  (C:/Users/leigh/bootcamp/homework2/lba-password-generator-homework/assets/password-generator.png)
