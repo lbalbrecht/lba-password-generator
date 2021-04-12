@@ -1,4 +1,4 @@
-# lba-password-generator-homework
+# lba-password-generator
 
 ## User Story
 The user is looking for a password generator that will allow them to choose which characters to include in the password
